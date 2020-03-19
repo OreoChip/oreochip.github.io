@@ -2,6 +2,7 @@
   "name": "now-ui-kit-react",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://www.oreochip.com",
   "dependencies": {
     "moment": "2.24.0",
     "node-sass": "4.12.0",
@@ -20,6 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.css",
     "minify-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.min.css --output-style compressed",
@@ -42,5 +45,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.5.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
