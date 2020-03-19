@@ -15,14 +15,6 @@ function DefaultFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
-                >
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a
                   href="http://presentation.creative-tim.com?ref=nukr-default-footer"
                   target="_blank"
                 >
@@ -42,17 +34,10 @@ function DefaultFooter() {
           <div className="copyright" id="copyright">
             © {new Date().getFullYear()}, Designed by{" "}
             <a
-              href="https://www.invisionapp.com?ref=nukr-default-footer"
+              href="http://www.smarttechks.com"
               target="_blank"
             >
-              Invision
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-default-footer"
-              target="_blank"
-            >
-              Creative Tim
+              SMART TECH LLC
             </a>
             .
           </div>
