@@ -86,7 +86,9 @@ function ExamplesNavbar() {
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
-            OREOCHIP
+            <div style={{ color: 'white' }}>
+              OREOCHIP
+            </div>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
