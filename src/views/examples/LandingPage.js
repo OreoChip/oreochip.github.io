@@ -93,7 +93,7 @@ function LandingPage() {
                     </Col>
                     <Col md="3">
                       <MotionOnViewport
-                        initial={{ y: -500, scale: 1 }}
+                        initial={{ y: 500, scale: 1 }}
                         whileHover={{ scale: 1.2 }}
                         animate={{ y: 0, scale: 1 }}
                         transition={{ duration: 1, type: "tween" }}
