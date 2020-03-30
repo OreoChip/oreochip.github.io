@@ -9,8 +9,10 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
+import { motion } from "framer-motion";
+import MotionOnViewport from "components/Utilities/MotionOnViewport";
 
 // core components
 import NavBar from "components/Navbars/NavBar.js";
@@ -40,10 +42,12 @@ function LandingPage() {
               <Col className="ml-auto mr-auto text-center" md="4">
                 <h2 className="title">Who we are?</h2>
               </Col>
-              <Col style={{padding: "30px 0"}} md="8">
+              <Col style={{ padding: "30px 0" }} md="8">
                 <h5 className="description">
-                  Data and automation is our passion, and engineering systems to build digital products is our expertise.
-                  We blend both data engineering and machine learning to help our clients have better insights!
+                  Data and automation is our passion, and engineering systems to
+                  build digital products is our expertise. We blend both data
+                  engineering and machine learning to help our clients have
+                  better insights!
                 </h5>
               </Col>
             </Row>
@@ -52,56 +56,76 @@ function LandingPage() {
                 <div className="team">
                   <Row>
                     <Col md="3">
-                      <div className="team-player">
-                        <img
+                      <MotionOnViewport
+                        initial={{ x: -500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ x: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
                             alt="..."
                             className="icon-wrapper img-fluid img-raised"
                             src={require("assets/img/data-analytics-icon.png")}
-                        ></img>
-                        <h4 className="title">Data Analytics</h4>
-                        <p className="description">
-                          Details here
-                        </p>
-                      </div>
+                          ></img>
+                          <h4 className="title">Data Analytics</h4>
+                          <p className="description">Details here</p>
+                        </div>
+                      </MotionOnViewport>
                     </Col>
                     <Col md="3">
-                      <div className="team-player">
-                        <img
+                      <MotionOnViewport
+                        initial={{ y: 500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ y: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
                             alt="..."
                             className="icon-wrapper img-fluid img-raised"
                             src={require("assets/img/data-governance-icon.png")}
-                        ></img>
-                        <h4 className="title">Data Governance</h4>
-                        <p className="description">
-                          Details here
-                        </p>
-                      </div>
+                          ></img>
+                          <h4 className="title">Data Governance</h4>
+                          <p className="description">Details here</p>
+                        </div>
+                      </MotionOnViewport>
                     </Col>
                     <Col md="3">
-                      <div className="team-player">
-                        <img
+                      <MotionOnViewport
+                        initial={{ y: 500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ y: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
                             alt="..."
                             className="icon-wrapper img-fluid img-raised"
                             src={require("assets/img/data-integration-icon.png")}
-                        ></img>
-                        <h4 className="title">Data Integration</h4>
-                        <p className="description">
-                          Details here
-                        </p>
-                      </div>
+                          ></img>
+                          <h4 className="title">Data Integration</h4>
+                          <p className="description">Details here</p>
+                        </div>
+                      </MotionOnViewport>
                     </Col>
                     <Col md="3">
-                      <div className="team-player">
-                        <img
+                      <MotionOnViewport
+                        initial={{ x: 500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ x: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
                             alt="..."
                             className="icon-wrapper img-fluid img-raised"
                             src={require("assets/img/data-science-icon.png")}
-                        ></img>
-                        <h4 className="title">Data Science</h4>
-                        <p className="description">
-                          Details here
-                        </p>
-                      </div>
+                          ></img>
+                          <h4 className="title">Data Science</h4>
+                          <p className="description">Details here</p>
+                        </div>
+                      </MotionOnViewport>
                     </Col>
                   </Row>
                 </div>
@@ -164,7 +188,7 @@ function LandingPage() {
                     className="btn-round"
                     color="info"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     Send Message
