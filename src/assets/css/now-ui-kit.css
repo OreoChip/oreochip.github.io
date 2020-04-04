@@ -3512,8 +3512,6 @@ Created using IcoMoon - icomoon.io
   padding-right: 0.7rem;
   cursor: pointer; }
   .button-dropdown .dropdown-toggle {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     display: block; }
     .button-dropdown .dropdown-toggle:after {
       display: none; }

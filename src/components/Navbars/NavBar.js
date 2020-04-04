@@ -14,6 +14,28 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+const dataServices = [{
+  name: 'Data Analytics',
+  id: 'data-analytics'
+}, {
+  name: 'Data Governance',
+  id: 'data-governance'
+}, {
+  name: 'Data Integration',
+  id: 'data-integration'
+}, {
+  name: 'Data Science',
+  id: 'data-science'
+}];
+
+const uiServices = [{
+  name: 'Web Design and Development'
+}, {
+  name: 'Mobile Development'
+}]
+
+const services = [...dataServices, ...uiServices];
+
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -49,42 +71,6 @@ function ExamplesNavbar() {
       ) : null}
       <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
         <Container>
-          <UncontrolledDropdown className="button-dropdown">
-            <DropdownToggle
-              caret
-              data-toggle="dropdown"
-              href="#pablo"
-              id="navbarDropdown"
-              tag="a"
-              onClick={e => e.preventDefault()}
-            >
-              <span className="button-bar"></span>
-              <span className="button-bar"></span>
-              <span className="button-bar"></span>
-            </DropdownToggle>
-            <DropdownMenu aria-labelledby="navbarDropdown">
-              <DropdownItem header tag="a">
-                Dropdown header
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Another action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Something else here
-              </DropdownItem>
-              <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Separated link
-              </DropdownItem>
-              <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                One more separated link
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
           <div className="navbar-translate">
             <div style={{ color: 'white' }}>
               OREOCHIP
@@ -110,17 +96,43 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
+                <UncontrolledDropdown className="button-dropdown">
+                  <DropdownToggle
+                      caret
+                      data-toggle="dropdown"
+                      href="#pablo"
+                      id="navbarDropdown"
+                      tag="a"
+                      onClick={e => e.preventDefault()}
+                  >
+                    <NavLink
+                        target="_blank"
+                        id="twitter-tooltip"
+                    >
+                      <i className="fab fa-servicestack"/>
+                      <p>Services</p>
+                    </NavLink>
+                  </DropdownToggle>
+                  <DropdownMenu aria-labelledby="navbarDropdown">
+                    <DropdownItem header tag="a">
+                      Data Services
+                    </DropdownItem>
+                    {dataServices.map(({ name, id }, index) =>
+                        <DropdownItem key={id} onClick={e => e.preventDefault()}>
+                          {name}
+                        </DropdownItem>
+                    )}
+                    <DropdownItem divider />
+                    <DropdownItem header tag="a">
+                      Dashboard Services
+                    </DropdownItem>
+                    {uiServices.map(({ name, id }, index) =>
+                        <DropdownItem key={id} onClick={e => e.preventDefault()}>
+                          {name}
+                        </DropdownItem>
+                    )}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -128,12 +140,9 @@ function ExamplesNavbar() {
                   target="_blank"
                   id="facebook-tooltip"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
+                  <i className="fas fa-hands-helping" style={{fontSize: '12px', paddingRight: 5}} />
+                  <p>About Us</p>
                 </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -141,12 +150,9 @@ function ExamplesNavbar() {
                   target="_blank"
                   id="instagram-tooltip"
                 >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
+                  <i className="far fa-id-card" style={{fontSize: '12px', paddingRight: 5}} />
+                  <p>Contact Us</p>
                 </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
               </NavItem>
             </Nav>
           </Collapse>
