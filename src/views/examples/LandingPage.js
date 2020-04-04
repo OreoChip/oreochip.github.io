@@ -1,5 +1,5 @@
 import React from "react";
-
+import TechStack from '../../components/TechStack/TechStack-component'
 // reactstrap components
 import {
   Button,
@@ -38,7 +38,7 @@ function LandingPage() {
         <LandingPageHeader />
         <div className="section section-about-us">
           <Container>
-            <Row>
+            <Row >
               <Col className="ml-auto mr-auto text-center" md="4">
                 <h2 className="title">Who we are?</h2>
               </Col>
@@ -54,7 +54,7 @@ function LandingPage() {
             <div className="section section-team text-center">
               <Container>
                 <div className="team">
-                  <Row>
+                  <Row  style={{ paddingBottom: "50px" }}>
                     <Col md="3">
                       <MotionOnViewport
                         initial={{ x: -500, scale: 1 }}
@@ -69,7 +69,6 @@ function LandingPage() {
                             src={require("assets/img/data-analytics-icon.png")}
                           ></img>
                           <h4 className="title">Data Analytics</h4>
-                          <p className="description">Details here</p>
                         </div>
                       </MotionOnViewport>
                     </Col>
@@ -87,7 +86,6 @@ function LandingPage() {
                             src={require("assets/img/data-governance-icon.png")}
                           ></img>
                           <h4 className="title">Data Governance</h4>
-                          <p className="description">Details here</p>
                         </div>
                       </MotionOnViewport>
                     </Col>
@@ -105,7 +103,6 @@ function LandingPage() {
                             src={require("assets/img/data-integration-icon.png")}
                           ></img>
                           <h4 className="title">Data Integration</h4>
-                          <p className="description">Details here</p>
                         </div>
                       </MotionOnViewport>
                     </Col>
@@ -123,16 +120,54 @@ function LandingPage() {
                             src={require("assets/img/data-science-icon.png")}
                           ></img>
                           <h4 className="title">Data Science</h4>
-                          <p className="description">Details here</p>
                         </div>
                       </MotionOnViewport>
                     </Col>
                   </Row>
+                  <Row>
+                    <Col md='3'/>
+                    <Col md='3' >
+                    <MotionOnViewport
+                        initial={{ x: 500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ x: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
+                            alt="..."
+                            className="icon-wrapper img-fluid img-raised"
+                            src={require("assets/img/web-development-icon.png")}
+                          ></img>
+                          <h4 className="title">Web Development</h4>
+                        </div>
+                      </MotionOnViewport>
+                    </Col>
+                    <Col md='3' >
+                    <MotionOnViewport
+                        initial={{ x: 500, scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={{ x: 0, scale: 1 }}
+                        transition={{ duration: 1, type: "tween" }}
+                      >
+                        <div className="team-player">
+                          <img
+                            alt="..."
+                            className="icon-wrapper img-fluid img-raised"
+                            src={require("assets/img/application-development.png")}
+                          ></img>
+                          <h4 className="title">Mobile Development</h4>
+                        </div>
+                      </MotionOnViewport>
+                    </Col>
+                    <Col md='3'/>
+                    </Row>
                 </div>
               </Container>
             </div>
           </Container>
         </div>
+        <TechStack />
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with us?</h2>
