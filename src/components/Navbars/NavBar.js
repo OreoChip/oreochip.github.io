@@ -15,16 +15,16 @@ import {
 } from "reactstrap";
 
 const dataServices = [{
-  name: 'Data Analytics',
+  name: 'Analytics',
   id: 'data-analytics'
 }, {
-  name: 'Data Governance',
+  name: 'Governance',
   id: 'data-governance'
 }, {
-  name: 'Data Integration',
+  name: 'Integration',
   id: 'data-integration'
 }, {
-  name: 'Data Science',
+  name: 'Science',
   id: 'data-science'
 }];
 
