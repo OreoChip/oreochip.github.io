@@ -54,7 +54,7 @@ function LandingPage() {
             <div className="section section-team text-center">
               <Container>
                 <div className="team">
-                  <Row  style={{ paddingBottom: "50px" }}>
+                  <Row  style={{ padding: "30px 0" }}>
                     <Col md="3">
                       <MotionOnViewport
                         initial={{ x: -500, scale: 1 }}
@@ -123,8 +123,6 @@ function LandingPage() {
                         </div>
                       </MotionOnViewport>
                     </Col>
-                  </Row>
-                  <Row>
                     <Col md='3'/>
                     <Col md='3' >
                     <MotionOnViewport
